@@ -1,0 +1,14 @@
+{
+  "name": "Discord-BBot",
+  "version": "1.0.0",
+  "description": "Personal Discord Bot",
+  "main": "bot.js",
+  "repository": "https://github.com/bbarber9/Discord-BBot.git",
+  "author": "Breyton Barber",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "dotenv": "^6.1.0"
+  }
+}
