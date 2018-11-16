@@ -1,16 +1,7 @@
 const Discord = require('discord.js');
 module.exports = class CommandParser {
     constructor(){
-        this.commandTree = {
-            'test': function(command) {
-                command.channel.send('Testing 123!');
-            },
-            'compliment':function(command) {
-                let user_id = command.mentions.users.first().id;
-                command.channel.send(`You are beautiful <@${user_id}>!`)
-            }
-        }
-
+        this.commandTree = {};
     }
 
     parseCommand(command) {
@@ -18,6 +9,10 @@ module.exports = class CommandParser {
         if(this.commandTree.hasOwnProperty(cmd)){
             this.commandTree[cmd](command);
         }
+    }
+
+    registerCommand(cmdName,cmdFunction){
+        this.commandTree[cmdName] = cmdFunction;
     }
 
 };

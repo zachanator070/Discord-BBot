@@ -1,2 +1,18 @@
 # Discord-BBot
-Personal Bot for Discord
+
+This bot is meant for playing around in Discord
+
+## Setup
+1. Clone this repo
+2. `yarn` inside of the directory
+3. create a `.env` file with a line like this:
+```
+BOT_TOKEN=your_token_here
+```
+4. `node bot.js` to run the bot
+
+## Adding Commands
+It is pretty simple to add a command to the bot simply create a new file in the `commands` directory and register it in `commandBootstrap.js` like so:
+``` javascript
+cmdParser.registerCommand('command_name',require('./commands/command_name'));
+```
