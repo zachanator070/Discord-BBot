@@ -1,5 +1,6 @@
 module.exports = {
     description: 'Insults a user',
+    example:'!insult @bbarber9#5232',
     action: function (command) {
         let user_id = command.mentions.users.first().id;
         let insults = [

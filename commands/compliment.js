@@ -1,5 +1,6 @@
 module.exports = {
     description: 'Compliments a user',
+    example: '!compliment @bbarber9#5232',
     action: function (command) {
         let user_id = command.mentions.users.first().id;
         let compliments = [
