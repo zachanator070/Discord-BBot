@@ -28,7 +28,11 @@ module.exports = {
     
                         let dispatcher = connection.playFile(process.cwd() + '/soundboard/' + filteredFiles[0]);
                         if(args.length > 1) {
-                            dispatcher.setVolume(parseFloat(args[1])/100.00);
+                            let volume = parseFloat(args[1]);
+                            if (volume > 100){
+                                volume = 100;
+                            }
+                            dispatcher.setVolume(volume/100.00);
                         }
                         dispatcher.on('end', () => {
                             command.member.voiceChannel.leave();
