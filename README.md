@@ -11,6 +11,10 @@ BOT_TOKEN=your_token_here
 ```
 4. `node bot.js` to run the bot
 
+## Optional Setup For Voice Commands
+
+In order to use voice functionality, you will need to install `ffmpeg`
+
 ## Adding Commands
 It is pretty simple to add a command to the bot simply create a new file in the `commands` directory and register it in `commandBootstrap.js` like so:
 ``` javascript

@@ -62,3 +62,6 @@ typings/
 
 # Intellij config
 .idea
+
+# soundboard Files
+soundboard/
