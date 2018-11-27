@@ -11,7 +11,7 @@ module.exports = {
         }
         fs.readdir('./soundboard', function (err, files) {
             if (err) {
-                console.log(err)
+                console.log(err);
                 return;
             }
             let filteredFiles = files.filter((cur) => {
