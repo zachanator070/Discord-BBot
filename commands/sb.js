@@ -22,16 +22,16 @@ module.exports = {
                 return;
             }
 
-            if (command.member.voiceChannel) {
-                command.member.voiceChannel.join()
+            if (command.member.voice.channel) {
+                command.member.voice.channel.join()
                     .then(connection => { // Connection is an instance of VoiceConnection
     
-                        let dispatcher = connection.playFile(process.cwd() + '/soundboard/' + filteredFiles[0]);
+                        let dispatcher = connection.play(process.cwd() + '/soundboard/' + filteredFiles[0]);
                         if(args.length > 1) {
                             dispatcher.setVolume(parseFloat(args[1])/100.00);
                         }
                         dispatcher.on('end', () => {
-                            command.member.voiceChannel.leave();
+                            command.member.voice.channel.leave();
                         })
                     })
     
