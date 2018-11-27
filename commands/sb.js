@@ -1,6 +1,6 @@
 const fs = require('fs');
 module.exports = {
-    description: 'Plays a sound from the soundboard\nUsage:\n```!sb <sound-name> <optional-volume 1-100>```',
+    description: 'Plays a sound from the soundboard\n```!sb <sound-name> <optional-volume 1-100>```',
     action: function (command) {
         let args = command.content.substring(1).split(' ').slice(1);
         if (!command.guild) return;
